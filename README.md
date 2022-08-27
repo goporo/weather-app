@@ -13,7 +13,7 @@ Enter city name/ zip code in the input field
 Or pick a location on the map to get the current weather at that point
 
 
-![image](https://user-images.githubusercontent.com/44795363/187026638-085835d8-0639-4f74-87e9-e8d955d2f190.png)
+![image](https://user-images.githubusercontent.com/44795363/187040728-9eae4c14-e420-46e2-9536-5309128edb51.png)
 
 
 
