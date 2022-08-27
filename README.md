@@ -12,9 +12,8 @@ Due to free API plan, repeatly request may cause the api to be invalid and broke
 Enter city name/ zip code in the input field
 Or pick a location on the map to get the current weather at that point
 
-
-![image](https://user-images.githubusercontent.com/44795363/187040728-9eae4c14-e420-46e2-9536-5309128edb51.png)
-
+![image](https://user-images.githubusercontent.com/44795363/187040758-6e77a412-143e-4120-98a1-c4b1657db485.png)
+<h5>Mobile view</h5>
 
 
 ## 🚀 https://symphonious-otter-ce5d6f.netlify.app/
