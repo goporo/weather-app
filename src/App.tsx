@@ -1,19 +1,16 @@
+import { Heading, IconButton, useColorMode, VStack } from "@chakra-ui/react";
+import { FaSun, FaMoon } from "react-icons/fa";
+import { useSelector } from "react-redux";
+
 import "./App.css";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
-import { Heading, IconButton, useColorMode, VStack } from "@chakra-ui/react";
-import { store } from "./app/store";
-import { FaSun, FaMoon } from "react-icons/fa";
 import { IWeatherState } from "./utils/Weather";
-import { useSelector } from "react-redux";
 import LoadingCard from "./components/LoadingCard";
 import Footer from "./components/Footer";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
-  store.subscribe(() => {
-    // localStorage.setItem('city', store.getState().weatherWatch.city);
-  });
 
   const loading = useSelector(
     (state: IWeatherState) => state.weatherWatch.loading

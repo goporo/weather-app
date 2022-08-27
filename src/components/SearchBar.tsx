@@ -1,9 +1,11 @@
 import { Button, HStack, Input, useToast } from "@chakra-ui/react";
-import React, { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+
 import fetchWeather from "../api/api";
 import { updateActual, updateCity, updateLoading } from "../app/store";
 import { IActual } from "../utils/Weather";
+import HomeMap from "./MapCard";
 
 const SearchBar = () => {
   const toast = useToast();
@@ -29,7 +31,6 @@ const SearchBar = () => {
         duration: 3000,
         isClosable: true,
       });
-      // setStatusInput(false);
 
       return setSearchVal("");
     }
@@ -69,22 +70,31 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <HStack mt="4" mb="4">
-        <Input
-          focusBorderColor="blue.500"
-          h="46"
-          // borderColor={!statusInput ? 'red.300' : 'transparent'}
-          variant="filled"
-          placeholder="Enter city name..."
-          value={searchVal}
-          onChange={(e) => setSearchVal(e.target.value)}
-        />
-        <Button colorScheme="blue" px="8" pl="10" pr="10" h="46" type="submit">
-          Search
-        </Button>
-      </HStack>
-    </form>
+    <div className="flex flex-col">
+      <form onSubmit={handleSubmit}>
+        <HStack mt="4" mb="4">
+          <Input
+            focusBorderColor="blue.500"
+            h="46"
+            variant="filled"
+            placeholder="Enter city name..."
+            value={searchVal}
+            onChange={(e) => setSearchVal(e.target.value)}
+          />
+          <Button
+            colorScheme="blue"
+            px="8"
+            pl="10"
+            pr="10"
+            h="46"
+            type="submit"
+          >
+            Search
+          </Button>
+        </HStack>
+      </form>
+      <HomeMap />
+    </div>
   );
 };
 

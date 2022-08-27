@@ -7,19 +7,28 @@ import {
   Image,
   Stack,
   Text,
+  useToast,
   Wrap,
 } from "@chakra-ui/react";
 import { CgDetailsMore } from "react-icons/cg";
+
 import { IActual } from "../utils/Weather";
 
 const WeatherCard = ({ props }: { props: IActual }) => {
   const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+  const toast = useToast();
 
   return (
     <>
       <Stack spacing={2} direction="row">
         <Wrap spacing="10px" overflow={"visible"}>
-          <Box padding="6" boxShadow="lg" minW="xs">
+          <Box
+            padding="6"
+            boxShadow="lg"
+            minW="xs"
+            maxW="sm"
+            bg="whiteAlpha.100"
+          >
             <Center>
               <Heading display={"flex"} as="h1" size="4xl">
                 {props.main?.temp.toPrecision(2)}°C
@@ -35,7 +44,13 @@ const WeatherCard = ({ props }: { props: IActual }) => {
               <Text> {props.weather?.[0].description}</Text>
             </Center>
           </Box>
-          <Box padding="6" boxShadow="lg" minW="xs">
+          <Box
+            padding="6"
+            boxShadow="lg"
+            minW="xs"
+            maxW="md"
+            bg="whiteAlpha.100"
+          >
             <Box mb="5">
               <Heading as="h1">
                 {props.name} &nbsp;
@@ -62,7 +77,15 @@ const WeatherCard = ({ props }: { props: IActual }) => {
                 marginTop="10"
                 colorScheme="blue"
                 variant="outline"
-                onClick={() => {}}
+                onClick={() => {
+                  toast({
+                    title: "Coming soon!",
+                    position: "top",
+                    status: "info",
+                    duration: 3000,
+                    isClosable: true,
+                  });
+                }}
               >
                 See more details
               </Button>

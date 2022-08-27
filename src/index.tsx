@@ -1,15 +1,19 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
+import { ChakraProvider, ColorModeScript, extendTheme } from "@chakra-ui/react";
+import { Provider } from "react-redux";
+
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
-import { ChakraProvider, ColorModeScript, extendTheme } from "@chakra-ui/react";
 import { store } from "./app/store";
 
-const theme = extendTheme({
-  initialColorMode: localStorage.getItem("chakra-ui-color-mode") || "dark",
+const config = {
+  initialColorMode: localStorage.getItem("chakra-ui-color-mode") || "light",
   useSystemColorMode: false,
+};
+
+const theme = extendTheme({
+  config,
 });
 
 const root = ReactDOM.createRoot(
@@ -18,7 +22,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
     <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.initialColorMode} />
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <App />
     </ChakraProvider>
   </Provider>
