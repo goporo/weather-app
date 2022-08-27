@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import { store } from "./app/store";
 
 const config = {
-  initialColorMode: localStorage.getItem("chakra-ui-color-mode") || "light",
+  initialColorMode: localStorage.getItem("chakra-ui-color-mode") || "dark",
   useSystemColorMode: false,
 };
 

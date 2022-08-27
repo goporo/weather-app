@@ -8,6 +8,7 @@ import WeatherCard from "./components/WeatherCard";
 import { IWeatherState } from "./utils/Weather";
 import LoadingCard from "./components/LoadingCard";
 import Footer from "./components/Footer";
+import HomeMap from "./components/MapCard";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -53,6 +54,7 @@ function App() {
           Weather forecast
         </Heading>
         <SearchBar></SearchBar>
+        <HomeMap />
         {getBody()}
         <Footer />
       </VStack>

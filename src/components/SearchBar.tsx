@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import fetchWeather from "../api/api";
 import { updateActual, updateCity, updateLoading } from "../app/store";
 import { IActual } from "../utils/Weather";
-import HomeMap from "./MapCard";
 
 const SearchBar = () => {
   const toast = useToast();
@@ -36,12 +35,14 @@ const SearchBar = () => {
     }
 
     localStorage.setItem("city", searchVal);
+
     dispatch(updateLoading(true));
     dispatch(updateCity(taskText));
     setSearchVal("");
     fetchWeather(searchVal)
       .then((res) => {
         if (res.status === 200) dispatch(updateActual(res.data as IActual));
+        // localStorage.setItem("coor", JSON.stringify(res.data.coord));
       })
       .catch((error) => {
         var msg = "City not found!";
@@ -93,7 +94,6 @@ const SearchBar = () => {
           </Button>
         </HStack>
       </form>
-      <HomeMap />
     </div>
   );
 };

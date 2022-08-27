@@ -16,7 +16,9 @@ export default function HomeMap() {
 }
 
 function Map() {
-  const [center, setCenter] = useState({ lat: 44, lng: -80 });
+  const [center, setCenter] = useState(
+    JSON.parse(localStorage.getItem("coor") as string) || { lat: 44, lng: -80 }
+  );
   const dispatch = useDispatch();
 
   const handleMapClick = (lat: number, lng: number) => {
@@ -26,6 +28,7 @@ function Map() {
         if (res.status === 200) {
           dispatch(updateActual(res.data as IActual));
           localStorage.setItem("city", res.data.name);
+          localStorage.setItem("coor", JSON.stringify({ lat: lat, lng: lng }));
         }
       })
       .catch((error) => {

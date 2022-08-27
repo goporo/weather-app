@@ -26,7 +26,7 @@ const WeatherCard = ({ props }: { props: IActual }) => {
             padding="6"
             boxShadow="lg"
             minW="xs"
-            maxW="sm"
+            maxW="xl"
             bg="whiteAlpha.100"
           >
             <Center>
@@ -48,7 +48,7 @@ const WeatherCard = ({ props }: { props: IActual }) => {
             padding="6"
             boxShadow="lg"
             minW="xs"
-            maxW="md"
+            maxW="xl"
             bg="whiteAlpha.100"
           >
             <Box mb="5">
@@ -60,7 +60,8 @@ const WeatherCard = ({ props }: { props: IActual }) => {
               </Heading>
               <Text display={"flex"}>
                 <span className="font-semibold">
-                  Country: {regionNames.of(props.sys?.country || "")}
+                  Country:{" "}
+                  {regionNames.of(props.sys?.country || "") || "Unknown"}
                 </span>
               </Text>
             </Box>

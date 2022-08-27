@@ -1,5 +1,23 @@
 .map-container {
-  width: 50vw;
+  width: 60vw;
   height: 60vh;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Box component of charka-ui */
+  .css-1t6sp2b {
+    width: 100% !important;
+  }
+  .map-container {
+    width: 100%;
+    height: 35vh;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .map-container {
+    width: 100%;
+    height: 35vh;
+  }
 }
