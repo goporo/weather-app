@@ -1,4 +1,4 @@
-nodejs typescript react redux axios chakraui reacticons
+https://nodejs.org/en/
 
 A weather forecast query tool via API with React/Redux/Typescript/Axios
 
