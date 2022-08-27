@@ -5,11 +5,16 @@
 
 A weather forecast query tool via API with React/Redux/Typescript/Axios
 
-CLICK HERE to test (by Vercel)!
+![image](https://user-images.githubusercontent.com/44795363/187026638-085835d8-0639-4f74-87e9-e8d955d2f190.png)
 
-
+## 🚀 Usage
+Enter city name/ zip code in the input field
+Or pick a location on the map to get the current weather at that point
 
 👊🏻 Thanks before starting...
 This project was created using the free Open Weather Map API:
 
 https://openweathermap.org/
+
+Inspired by:
+https://github.com/linhous/weather-react-redux
