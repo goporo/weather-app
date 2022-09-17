@@ -21,7 +21,7 @@ const WeatherCard = ({ props }: { props: IActual }) => {
   return (
     <>
       <Stack spacing={2} direction="row">
-        <Wrap spacing="10px" overflow={"visible"}>
+        <Wrap spacing="10px" overflow={"visible"} mb="5">
           <Box
             padding="6"
             boxShadow="lg"

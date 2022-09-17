@@ -54,8 +54,8 @@ function App() {
           Weather forecast
         </Heading>
         <SearchBar></SearchBar>
-        <HomeMap />
         {getBody()}
+        <HomeMap />
         <Footer />
       </VStack>
     </div>
