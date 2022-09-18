@@ -10,7 +10,9 @@ Due to free API plan, repeatly request may cause the api to be invalid and broke
 
 ## ❓ Usage
 Enter city name/ zip code in the input field
+
 Or pick a location on the map to get the current weather at that point
+
 ![image](https://user-images.githubusercontent.com/44795363/187040816-6e230b17-bc91-477a-98fa-d2beefa725e2.png)
 
 
