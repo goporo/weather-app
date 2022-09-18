@@ -14,7 +14,7 @@ Or pick a location on the map to get the current weather at that point
 ![image](https://user-images.githubusercontent.com/44795363/187040816-6e230b17-bc91-477a-98fa-d2beefa725e2.png)
 
 
-## 🚀 weather-app-595.netlify.app/
+## 🚀 https://weather-app-595.netlify.app/
 👊🏻 Thanks before starting...
 This project was created using the free Open Weather Map API:
 
