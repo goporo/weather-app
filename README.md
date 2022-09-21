@@ -6,7 +6,7 @@
 )](https://axios-http.com/ptbr/docs/intro) [![chakraui](https://img.shields.io/badge/Chakra%20UI-38B2AC?style=for-the-badge&logo=chakraui&logoColor=white)](https://chakra-ui.com/) [![reacticons](https://img.shields.io/badge/React%20Icons-E91E63?style=for-the-badge&logo=react&logoColor=white)](https://react-icons.github.io/react-icons/)
 
 ## ⚠️ Warning
-Due to free API plan, repeatly request may cause the api to be invalid and broken website
+Due to free API plan, repeatly request may cause the weather api & google map api to be invalid and break the website
 
 ## ❓ Usage
 Enter city name/ zip code in the input field
